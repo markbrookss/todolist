@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+:root {
+  --primary-font: Roboto;
+  --bg-color: #111;
+  --primary-color: #fff;
+  --primary-font-size: 50px;
+  --primary-margin: 50px auto;
+  --btn-width: 7rem;
+  --primary-padding: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: var(--primary-font);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+.container {
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: var(--primary-margin);
+  min-height: 100vh;
+}
+.container h1 {
+  margin: 1.25rem auto;
+  font-size: var(--primary-font-size);
+}
+.add-new-task {
+  display: block;
+  width: 100%;
+}
+.add-new-task h4,
+.add-new-task input {
+  margin: 0.5rem 0;
+  font-size: larger;
+  font-weight: 700;
+  cursor: pointer;
+}
+.add-new-task input {
+  border: none;
+  padding: var(--primary-padding);
+}
+.add-new-task input#task-input {
+  width: calc(100% - var(--btn-width) - 0.25rem);
+}
+.add-new-task input#add-btn {
+  width: var(--btn-width);
+}
+
+hr {
+  margin: 0.5rem auto;
+  width: 100%;
+}
+.tasks {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.task {
+  margin-bottom: 0.5rem;
+}
+.task input {
+  border: none;
+  padding: var(--primary-padding);
+  font-size: larger;
+  font-weight: 700;
+  width: calc(100% - 2 * (var(--btn-width)) - 0.75rem);
+  cursor: pointer;
+  margin: 0 0.125rem;
+}
+.task input#edit {
+  width: var(--btn-width);
+}
+.task input#delete {
+  width: calc(var(--btn-width));
+}
+.done {
+  background-color: #333;
+  color: #fff;
+}
